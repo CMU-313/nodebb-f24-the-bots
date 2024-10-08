@@ -119,7 +119,7 @@ describe('Topic Events', () => {
 		it('should create a "solved" event when a topic is marked as solved', async () => {
 			await topics.solve(tid, topic.userId);
 			const events = await topics.events.get(tid);
-			
+
 			const solvedEvent = events.find(event => event.type === 'solved');
 			assert(solvedEvent);
 		});
@@ -127,7 +127,7 @@ describe('Topic Events', () => {
 		it('should create an "unsolved" event when a solved topic is marked as unsolved', async () => {
 			await topics.unsolve(tid, topic.userId);
 			const events = await topics.events.get(tid);
-			
+
 			const unsolvedEvent = events.find(event => event.type === 'unsolved');
 			assert(unsolvedEvent);
 		});

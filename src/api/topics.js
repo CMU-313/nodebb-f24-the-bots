@@ -300,9 +300,9 @@ topicsAPI.bump = async (caller, { tid }) => {
 };
 
 topicsAPI.solve = async function (caller, data) {
-    await doTopicAction('solve', 'event:topic_solved', caller, {tids:data.tid,});
+	await doTopicAction('solve', 'event:topic_solved', caller, { tids: data.tid });
 };
 
-topicsAPI.unsolve = async function (caller,data){
-    await doTopicAction('unsolve', 'event:topic_unsolved', caller, {tids:data.tid});
+topicsAPI.unsolve = async function (caller, data) {
+	await doTopicAction('unsolve', 'event:topic_unsolved', caller, { tids: data.tid });
 };
