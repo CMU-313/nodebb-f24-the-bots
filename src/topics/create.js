@@ -33,6 +33,7 @@ module.exports = function (Topics) {
 			lastposttime: 0,
 			postcount: 0,
 			viewcount: 0,
+			resolved: false,
 		};
 
 		if (Array.isArray(data.tags) && data.tags.length) {
@@ -244,6 +245,7 @@ module.exports = function (Topics) {
 		posts.overrideGuestHandle(postData, data.handle);
 
 		postData.votes = 0;
+		postData.resolved = false;
 		postData.bookmarked = false;
 		postData.display_edit_tools = true;
 		postData.display_delete_tools = true;

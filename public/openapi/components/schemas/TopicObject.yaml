@@ -5,6 +5,10 @@ TopicObject:
       properties:
         lastposttime:
           type: number
+        resolved:
+          type: boolean
+          description: Indicates whether the topic is marked as solved or unsolved.
+          example: false
         category:
           type: object
           properties:
