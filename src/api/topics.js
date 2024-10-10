@@ -306,3 +306,16 @@ topicsAPI.solve = async function (caller, data) {
 topicsAPI.unsolve = async function (caller, data) {
 	await doTopicAction('unsolve', 'event:topic_unsolved', caller, { tids: data.tid });
 };
+
+topicsAPI.sortTopics = async function (caller, { topics }) {
+	if (!topics || !Array.isArray(topics)) {
+		throw new Error('[[error:invalid-topics-array]]');
+	}
+	topics.sort((a, b) => {
+		const aSolved = a.solved === "true";
+		const bSolved = b.solved === "true";
+		if (aSolved !== bSolved) {
+			return aSolved ? 1 : -1;
+		}
+		return b.lastposttime - a.lastposttime;
+	});
