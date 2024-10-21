@@ -251,6 +251,8 @@ TopicObjectSlim:
           type: number
         votes:
           type: number
+        solved:
+          type: string
         teaserPid:
           oneOf:
             - type: number
