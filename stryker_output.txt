@@ -1,0 +1,48 @@
+[32m14:44:34 (85582) INFO ProjectReader[39m Found 548 of 10922 file(s) to be mutated.
+[91m14:44:35 (85582) ERROR Stryker[39m Unexpected error occurred while running Stryker SyntaxError: /Users/cindy/Desktop/NodeBB/nodebb-f24-the-bots/src/cli/index.js: 'return' outside of function. (114:1)
+
+  112 | if (!configExists && process.argv[2] !== 'setup') {
+  113 | 	require('./setup').webInstall();
+> 114 | 	return;
+      | 	^
+  115 | }
+  116 |
+  117 | if (configExists) {
+    at constructor (/Users/cindy/Desktop/NodeBB/nodebb-f24-the-bots/node_modules/@babel/parser/lib/index.js:362:19)
+    at V8IntrinsicMixin.raise (/Users/cindy/Desktop/NodeBB/nodebb-f24-the-bots/node_modules/@babel/parser/lib/index.js:3259:19)
+    at V8IntrinsicMixin.parseReturnStatement (/Users/cindy/Desktop/NodeBB/nodebb-f24-the-bots/node_modules/@babel/parser/lib/index.js:12617:12)
+    at V8IntrinsicMixin.parseStatementContent (/Users/cindy/Desktop/NodeBB/nodebb-f24-the-bots/node_modules/@babel/parser/lib/index.js:12275:21)
+    at V8IntrinsicMixin.parseStatementLike (/Users/cindy/Desktop/NodeBB/nodebb-f24-the-bots/node_modules/@babel/parser/lib/index.js:12244:17)
+    at V8IntrinsicMixin.parseStatementListItem (/Users/cindy/Desktop/NodeBB/nodebb-f24-the-bots/node_modules/@babel/parser/lib/index.js:12224:17)
+    at V8IntrinsicMixin.parseBlockOrModuleBlockBody (/Users/cindy/Desktop/NodeBB/nodebb-f24-the-bots/node_modules/@babel/parser/lib/index.js:12797:61)
+    at V8IntrinsicMixin.parseBlockBody (/Users/cindy/Desktop/NodeBB/nodebb-f24-the-bots/node_modules/@babel/parser/lib/index.js:12790:10)
+    at V8IntrinsicMixin.parseBlock (/Users/cindy/Desktop/NodeBB/nodebb-f24-the-bots/node_modules/@babel/parser/lib/index.js:12778:10)
+    at V8IntrinsicMixin.parseStatementContent (/Users/cindy/Desktop/NodeBB/nodebb-f24-the-bots/node_modules/@babel/parser/lib/index.js:12334:21)
+    at V8IntrinsicMixin.parseStatementLike (/Users/cindy/Desktop/NodeBB/nodebb-f24-the-bots/node_modules/@babel/parser/lib/index.js:12244:17)
+    at V8IntrinsicMixin.parseStatementOrSloppyAnnexBFunctionDeclaration (/Users/cindy/Desktop/NodeBB/nodebb-f24-the-bots/node_modules/@babel/parser/lib/index.js:12234:17)
+    at V8IntrinsicMixin.parseIfStatement (/Users/cindy/Desktop/NodeBB/nodebb-f24-the-bots/node_modules/@babel/parser/lib/index.js:12611:28)
+    at V8IntrinsicMixin.parseStatementContent (/Users/cindy/Desktop/NodeBB/nodebb-f24-the-bots/node_modules/@babel/parser/lib/index.js:12273:21)
+    at V8IntrinsicMixin.parseStatementLike (/Users/cindy/Desktop/NodeBB/nodebb-f24-the-bots/node_modules/@babel/parser/lib/index.js:12244:17)
+    at V8IntrinsicMixin.parseModuleItem (/Users/cindy/Desktop/NodeBB/nodebb-f24-the-bots/node_modules/@babel/parser/lib/index.js:12221:17)
+    at V8IntrinsicMixin.parseBlockOrModuleBlockBody (/Users/cindy/Desktop/NodeBB/nodebb-f24-the-bots/node_modules/@babel/parser/lib/index.js:12797:36)
+    at V8IntrinsicMixin.parseBlockBody (/Users/cindy/Desktop/NodeBB/nodebb-f24-the-bots/node_modules/@babel/parser/lib/index.js:12790:10)
+    at V8IntrinsicMixin.parseProgram (/Users/cindy/Desktop/NodeBB/nodebb-f24-the-bots/node_modules/@babel/parser/lib/index.js:12118:10)
+    at V8IntrinsicMixin.parseTopLevel (/Users/cindy/Desktop/NodeBB/nodebb-f24-the-bots/node_modules/@babel/parser/lib/index.js:12108:25)
+    at V8IntrinsicMixin.parse (/Users/cindy/Desktop/NodeBB/nodebb-f24-the-bots/node_modules/@babel/parser/lib/index.js:13924:10)
+    at parse (/Users/cindy/Desktop/NodeBB/nodebb-f24-the-bots/node_modules/@babel/parser/lib/index.js:13958:38)
+    at parser (/Users/cindy/Desktop/NodeBB/nodebb-f24-the-bots/node_modules/@babel/core/lib/parser/index.js:41:34)
+    at parser.next (<anonymous>)
+    at parse (/Users/cindy/Desktop/NodeBB/nodebb-f24-the-bots/node_modules/@babel/core/lib/parse.js:25:37)
+    at parse.next (<anonymous>)
+    at step (/Users/cindy/Desktop/NodeBB/nodebb-f24-the-bots/node_modules/gensync/index.js:261:32)
+    at /Users/cindy/Desktop/NodeBB/nodebb-f24-the-bots/node_modules/gensync/index.js:273:13
+    at async.call.result.err.err (/Users/cindy/Desktop/NodeBB/nodebb-f24-the-bots/node_modules/gensync/index.js:223:11) {
+  code: 'BABEL_PARSE_ERROR',
+  reasonCode: 'IllegalReturn',
+  loc: Position { line: 114, column: 1, index: 3699 },
+  pos: 3699,
+  syntaxPlugin: undefined
+}
+[32m14:44:35 (85582) INFO Stryker[39m This might be a known problem with a solution documented in our troubleshooting guide.
+[32m14:44:35 (85582) INFO Stryker[39m You can find it at https://stryker-mutator.io/docs/stryker-js/troubleshooting/
+[32m14:44:35 (85582) INFO Stryker[39m Still having trouble figuring out what went wrong? Try `npx stryker run --fileLogLevel trace --logLevel debug` to get some more info.
