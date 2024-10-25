@@ -1,0 +1,4 @@
+"scripts": {
+  "build": "babel src --out-dir dist",
+  "watch": "nodemon --watch src --exec \"npm run build\""
+}
