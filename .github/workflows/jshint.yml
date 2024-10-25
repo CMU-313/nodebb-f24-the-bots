@@ -1,0 +1,19 @@
+name: Lint with JSHint
+
+on:
+  pull_request:
+    branches:
+      - main  # Specify the branch you want the workflow to trigger on (e.g., `main`)
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '14'  # Specify the Node.js version you need
+    - run: npm install
+    - run: npx jshint src/  # Run JSHint on the `src` directory
