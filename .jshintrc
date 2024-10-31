@@ -1,8 +1,11 @@
 {
-  "esversion": 6,     // To specify ES6+ support
+  "esversion": 9,     // To specify ES6+ support
   "curly": true,      // Require curly braces around blocks
   "eqeqeq": true,     // Require strict equality (=== and !==)
   "undef": true,      // Warn about undefined variables
-  "unused": true,     // Warn about unused variables
-  "node": true        // Enable Node.js global variables and scoping
+  "unused": false,     // Warn about unused variables
+  "node": true,      // Enable Node.js global variables and scoping
+  "-W018": false,
+  "-W116": false,
+  "-W083": false
 }
