@@ -1,0 +1,26 @@
+name: JSHint Lint Check
+
+on:
+  push:
+    branches: [f24] # Adjust the branch as needed
+  pull_request:
+    branches: [f24]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '22' # Specify your Node version
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run JSHint
+      run: npx jshint src/ # Runs JSHint on all files in the repo

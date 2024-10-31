@@ -8,9 +8,13 @@ exports.jar = function () {
 };
 
 async function call(url, method, { body, timeout, jar, ...config } = {}) {
-	let fetchImpl = fetch;
+	let fetchImpl;
 	if (jar) {
+		// jshint undef: false
 		fetchImpl = fetchCookie(fetch, jar);
+	} else {
+		// jshint undef: false
+		fetchImpl = fetch;
 	}
 
 	const jsonTest = /application\/([a-z]+\+)?json/;
@@ -23,6 +27,7 @@ async function call(url, method, { body, timeout, jar, ...config } = {}) {
 		},
 	};
 	if (timeout > 0) {
+		// jshint undef: false
 		opts.signal = AbortSignal.timeout(timeout);
 	}
 
