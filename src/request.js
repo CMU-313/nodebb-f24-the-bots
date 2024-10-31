@@ -8,7 +8,6 @@ exports.jar = function () {
 };
 
 async function call(url, method, { body, timeout, jar, ...config } = {}) {
-	
 	let fetchImpl;
 	if (jar) {
 		// jshint undef: false
