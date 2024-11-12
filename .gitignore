@@ -74,3 +74,13 @@ test.sh
 !**/.gitkeep
 # stryker temp files
 .stryker-tmp
+
+node_modules/*
+!node_modules/nodebb-theme-harmony
+node_modules/nodebb-theme-harmony/*
+!node_modules/nodebb-theme-harmony/templates
+node_modules/nodebb-theme-harmony/templates/*
+!node_modules/nodebb-theme-harmony/templates/partials
+node_modules/nodebb-theme-harmony/templates/partials/*
+!node_modules/nodebb-theme-harmony/templates/partials/topics_list.tpl
+!node_modules/nodebb-theme-bulbasaur
